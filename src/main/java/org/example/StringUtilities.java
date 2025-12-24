@@ -8,7 +8,6 @@ public class StringUtilities {
 
     public static boolean shortString(String str) {
         return str != null && str.length() < 5;
-
     }
 
     // Add a static function called firstLetter that takes a String parameter and
@@ -21,7 +20,10 @@ public class StringUtilities {
     // returns the string with all instances of
     // "asparagus" (lowercase only) replaced with 4 stars: "****"
     public static String censorAsparagus(String str) {
-        return  str.replace("asparagus", "****");
+        if (str.contains("asparagus")) {
+            return str.replace("asparagus", "****");
+        }
+        return str;
     }
 
 // Add a static function called bigger that takes two String parameters and
